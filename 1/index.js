@@ -19,6 +19,8 @@ for (let line of lines) {
 //last elf
 elfs.push(currentCalories)
 
+console.log('Answer 1: ' + Math.max(...elfs))
+
 let totalCalories = 0
 for (let i = 0; i < 3; i++) {
     let mostCalories = 0
@@ -29,9 +31,6 @@ for (let i = 0; i < 3; i++) {
             mostCalories = elf
             mostId = index
         }
-    }
-    if (i == 0) {
-        console.log('Answer 1: ' + mostCalories)
     }
 
     totalCalories += mostCalories
