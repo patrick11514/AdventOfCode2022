@@ -6,8 +6,6 @@ let data = fs.readFileSync('input.txt', 'utf8')
 
 let lines = data.split('\n')
 
-console.log(lines)
-
 let currentCalories = 0
 
 for (let line of lines) {
@@ -32,8 +30,12 @@ for (let i = 0; i < 3; i++) {
             mostId = index
         }
     }
+    if (i == 0) {
+        console.log('Answer 1: ' + mostCalories)
+    }
+
     totalCalories += mostCalories
     elfs[mostId] = 0
 }
 
-console.log(totalCalories)
+console.log('Answer 2: ' + totalCalories)
